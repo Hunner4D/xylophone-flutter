@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:audioplayers/audioplayers.dart';
 
+import "package:xylophone/widgets/tile.dart";
+
 void main() => runApp(XylophoneApp());
 
 class XylophoneApp extends StatelessWidget {
@@ -18,69 +20,25 @@ class XylophoneApp extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
-                Expanded(
-                  child: TextButton(
-                    style: TextButton.styleFrom(backgroundColor: Colors.red),
-                    onPressed: () {
-                      playSound(1);
-                    },
-                    child: null,
-                  ),
+                Tile(
+                  noteNum: 1,
+                  color: Colors.red,
                 ),
-                Expanded(
-                  child: TextButton(
-                    style: TextButton.styleFrom(backgroundColor: Colors.orange),
-                    onPressed: () {
-                      playSound(2);
-                    },
-                    child: null,
-                  ),
+                Tile(
+                  noteNum: 2,
+                  color: Colors.orange,
                 ),
-                Expanded(
-                  child: TextButton(
-                    style: TextButton.styleFrom(backgroundColor: Colors.yellow),
-                    onPressed: () {
-                      playSound(3);
-                    },
-                    child: null,
-                  ),
+                Tile(
+                  noteNum: 3,
+                  color: Colors.yellow,
                 ),
-                Expanded(
-                  child: TextButton(
-                    style: TextButton.styleFrom(backgroundColor: Colors.green),
-                    onPressed: () {
-                      playSound(4);
-                    },
-                    child: null,
-                  ),
+                Tile(
+                  noteNum: 4,
+                  color: Colors.green,
                 ),
-                Expanded(
-                  child: TextButton(
-                    style: TextButton.styleFrom(backgroundColor: Colors.teal),
-                    onPressed: () {
-                      playSound(5);
-                    },
-                    child: null,
-                  ),
-                ),
-                Expanded(
-                  child: TextButton(
-                    style: TextButton.styleFrom(backgroundColor: Colors.blue),
-                    onPressed: () {
-                      playSound(6);
-                    },
-                    child: null,
-                  ),
-                ),
-                Expanded(
-                  child: TextButton(
-                    style: TextButton.styleFrom(backgroundColor: Colors.purple),
-                    onPressed: () {
-                      playSound(7);
-                    },
-                    child: null,
-                  ),
-                ),
+                Tile(noteNum: 5, color: Colors.teal),
+                Tile(noteNum: 6, color: Colors.blue),
+                Tile(noteNum: 7, color: Colors.purple),
               ],
             ),
           ),
